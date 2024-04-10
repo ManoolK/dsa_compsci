@@ -13,7 +13,13 @@ public with sharing class StringChallenges {
      * @return the string in upper case
      */
     public static String toUpper(String str) {
-        return str.toUpperCase() ?? '';
+        List<Integer> chars = str.getChars();
+        for (Integer chr : chars) {
+            if (chr >= 97 || chr <= 122) {
+                chr -= 32;
+            }
+        }
+        return String.fromCharArray(chars);
     }
 
     /**
@@ -23,7 +29,13 @@ public with sharing class StringChallenges {
      * @return the string in lower case
      */
     public static String toLower(String str) {
-        return str.toLowerCase() ?? '';
+        List<Integer> chars = str.getChars();
+        for (Integer chr : chars) {
+            if (chr >= 65 || chr <= 90) {
+                chr += 32;
+            }
+        }
+        return String.fromCharArray(chars);
     }
 
 }
