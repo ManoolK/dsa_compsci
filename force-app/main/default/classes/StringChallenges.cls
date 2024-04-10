@@ -1,9 +1,11 @@
 /**
  * Created by bjohnson on 3/16/24.
+ * 
+ * Implemented by Oxana Suvorova
  */
 
 public with sharing class StringChallenges {
-   public class StringChallengesException extends Exception {}
+    public class StringChallengesException extends Exception {}
     /**
      * Given a string return the same string with all letters in upper case.
      * The string may contain integers and punctuation. They should be ignored.
@@ -11,8 +13,7 @@ public with sharing class StringChallenges {
      * @return the string in upper case
      */
     public static String toUpper(String str) {
-        //TODO: Implement
-        throw new StringChallengesException('Not Implemented');
+        return str.toUpperCase() ?? '';
     }
 
     /**
@@ -22,8 +23,7 @@ public with sharing class StringChallenges {
      * @return the string in lower case
      */
     public static String toLower(String str) {
-        //TODO: Implement
-        throw new StringChallengesException('Not Implemented');
+        return str.toLowerCase() ?? '';
     }
 
 }
